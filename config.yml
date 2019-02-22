@@ -5,3 +5,13 @@ custom-commands:
     help: Display issues assigned to me
     script: |-
       {{jira}} list --query "resolution = unresolved and assignee=currentuser() ORDER BY created"
+  - name: workon
+    help: Transitions ticket to in-progress state and creates descriptive branch from current working branch
+    args: 
+      - name: ISSUE
+        required: true
+    script: |-
+      {{jira}} transition --noedit "Dev" -b {{args.ISSUE}}
+      export JIRABRANCH=$({{jira}} view {{args.ISSUE}} | grep summary | awk 'sub(/summary:\s*/,""){print $0}' | tr '[:upper:] ' '[:lower:]-')
+      git checkout -b {{args.ISSUE}}$JIRABRANCH
+      git push -u origin HEAD

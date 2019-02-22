@@ -46,3 +46,31 @@ STU-17949:   Update Atlas Client to add redirect Uris, Post-logout redirect Uris
 ATL-473:     Extend BBID token expiration in all environments
 ➜  jira-cli git:(master) 
 ```
+
+### jira workon ISSUE
+
+* Transitions the provided issue to "Dev" state.
+* Checkouts from current working branch, a new descriptive branch.
+* Pushes the newly checked out branch upstream.
+
+```
+jira workon ATL-574
+```
+
+_Sample output:_
+
+```
+➜  jira-cli git:(master) ✗ jira workon ATL-574                    
+OK ATL-574 http://havokjira/browse/ATL-574
+M       config.yml
+Switched to a new branch 'ATL-574-test-for-zach'
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create pull request for ATL-574-test-for-zach:
+remote:   https://scm.bluebeam.com/users/zwentz/repos/jira-cli/compare/commits?sourceBranch=refs/heads/ATL-574-test-for-zach
+remote: 
+To ssh://scm.bluebeam.com:7999/~zwentz/jira-cli.git
+ * [new branch]      HEAD -> ATL-574-test-for-zach
+Branch 'ATL-574-test-for-zach' set up to track remote branch 'ATL-574-test-for-zach' from 'origin'. 
+➜  jira-cli git:(ATL-574-test-for-zach) ✗
+```

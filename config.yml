@@ -1,0 +1,7 @@
+endpoint: http://havokjira
+
+custom-commands:
+  - name: mine
+    help: Display issues assigned to me
+    script: |-
+      {{jira}} list --query "resolution = unresolved and assignee=currentuser() ORDER BY created"

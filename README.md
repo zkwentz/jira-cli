@@ -15,7 +15,7 @@ _Note: Please note that this Makefile updates your `~/.zshrc` or `~/.bashrc`, se
 ```
 export GOPATH=${HOME}/.go
 export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:/Users/zwentz/.go/bin:${GOROOT}/bin"
+export PATH="$PATH:${HOME}/.go/bin:${GOROOT}/bin"
 eval "$(jira --completion-script-zsh)
 ```
 
@@ -50,7 +50,7 @@ ATL-473:     Extend BBID token expiration in all environments
 ### jira workon ISSUE
 
 * Transitions the provided issue to "Dev" state.
-* Checkouts from current working branch, a new descriptive branch.
+* Checks out a new branch from current working branch, a new descriptive branch.
 * Pushes the newly checked out branch upstream.
 
 ```
@@ -60,7 +60,7 @@ jira workon ATL-574
 _Sample output:_
 
 ```
-➜  jira-cli git:(master) ✗ jira workon ATL-574                    
+➜  jira-cli git:(master) jira workon ATL-574                    
 OK ATL-574 http://havokjira/browse/ATL-574
 M       config.yml
 Switched to a new branch 'ATL-574-test-for-zach'

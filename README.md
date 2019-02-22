@@ -37,3 +37,12 @@ This dependency comes with a lot of commands out of the box, and you can read mo
 Returns a list of JIRA tickets that are unresolved and have been currently assigned to you.
 
 `jira mine`
+
+_Sample output:_
+
+```
+➜  jira-cli git:(master) jira mine
+STU-17949:   Update Atlas Client to add redirect Uris, Post-logout redirect Uris, and extend token lifetime, and add client to QA and Prod-US
+ATL-473:     Extend BBID token expiration in all environments
+➜  jira-cli git:(master) 
+```

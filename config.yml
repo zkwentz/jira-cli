@@ -1,4 +1,4 @@
-endpoint: http://havokjira
+endpoint: ${JIRA_ENDPOINT} 
 
 custom-commands:
   - name: mine

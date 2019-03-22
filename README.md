@@ -5,7 +5,7 @@ A command line client for interacting with JIRA.
 ## Installation
 
 ```
-git clone ssh://git@scm.bluebeam.com:7999/~zwentz/jira-cli.git
+git clone ${THIS_REPO}
 cd jira-cli
 make
 ```
@@ -61,15 +61,15 @@ _Sample output:_
 
 ```
 ➜  jira-cli git:(master) jira workon ATL-574                    
-OK ATL-574 http://havokjira/browse/ATL-574
+OK ATL-574 http://jira/browse/ATL-574
 M       config.yml
 Switched to a new branch 'ATL-574-test-for-zach'
 Total 0 (delta 0), reused 0 (delta 0)
 remote: 
 remote: Create pull request for ATL-574-test-for-zach:
-remote:   https://scm.bluebeam.com/users/zwentz/repos/jira-cli/compare/commits?sourceBranch=refs/heads/ATL-574-test-for-zach
+remote:   https://sourcecountrol/users/zwentz/repos/jira-cli/compare/commits?sourceBranch=refs/heads/ATL-574-test-for-zach
 remote: 
-To ssh://scm.bluebeam.com:7999/~zwentz/jira-cli.git
+To ssh://sourcecontrol/~zwentz/jira-cli.git
  * [new branch]      HEAD -> ATL-574-test-for-zach
 Branch 'ATL-574-test-for-zach' set up to track remote branch 'ATL-574-test-for-zach' from 'origin'. 
 ➜  jira-cli git:(ATL-574-test-for-zach) ✗

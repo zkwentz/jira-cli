@@ -5,6 +5,7 @@ A command line client for interacting with JIRA.
 ## Installation
 
 ```
+export JIRA_ENDPOINT=http://jira.com
 git clone ${THIS_REPO}
 cd jira-cli
 make
